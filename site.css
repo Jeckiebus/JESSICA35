@@ -1,0 +1,381 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+
+   v2.0 | 20110126
+
+   License: none (public domain)
+
+*/
+
+
+html, body, div, span, applet, object, iframe,
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+
+a, abbr, acronym, address, big, cite, code,
+
+del, dfn, em, img, ins, kbd, q, s, samp,
+
+small, strike, strong, sub, sup, tt, var,
+
+b, u, i, center,
+
+dl, dt, dd, ol, ul, li,
+
+fieldset, form, label, legend,
+
+table, caption, tbody, tfoot, thead, tr, th, td,
+
+article, aside, canvas, details, embed, 
+
+figure, figcaption, footer, header, hgroup, 
+
+menu, nav, output, ruby, section, summary,
+
+time, mark, audio, video {
+
+	margin: 0;
+
+	padding: 0;
+
+	border: 0;
+
+	font-size: 100%;
+
+	font: inherit;
+
+	vertical-align: baseline;
+
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+
+footer, header, hgroup, menu, nav, section {
+
+	display: block;
+
+}
+
+body {
+
+	line-height: 1;
+
+}
+
+ol, ul {
+
+	list-style: none;
+
+}
+
+blockquote, q {
+
+	quotes: none;
+
+}
+
+blockquote:before, blockquote:after,
+
+q:before, q:after {
+
+	content: '';
+
+	content: none;
+
+}
+
+table {
+
+	border-collapse: collapse;
+
+	border-spacing: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+
+/* Universal settings */
+:root {
+  --primary-color: #F5F5DD;
+  --letter-color: #EAE3C9;
+}
+
+* {
+    font-family: 'Kanit', sans-serif;
+    font-size: 100%;
+    color:black;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--letter-color); /* Classic sky blue background */
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+}
+
+header img {
+    vertical-align: middle;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;    
+    min-height: 120vh;
+    background-color: var(--primary-color);
+}
+
+main > * {
+    min-width: 60%;
+}
+
+#bottom-line {
+    position: relative;
+    width: 100%;
+    margin-top: 4%;
+    margin-bottom: 1%;
+}
+
+#bottom-line::after {
+    content: "";
+    height: 1px;
+    left: 100px;
+    right: 100px;
+    background-color: black;
+    position: absolute;
+}
+
+b {
+    font-weight: bold;
+}
+
+#anmalan-button-cntr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    padding: 2%;
+    background-color: #f7f7f7; /* Soft background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-top: 20px; /* Space from the top element */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+#anmalan-button-cntr:hover {
+    background-color: #e0e0e0; /* Slight change on hover */
+}
+
+.anmalan-button-cntr button {
+    padding: 10px 20px; /* Add space inside the button */
+    font-size: 16px; /* Text size */
+    font-weight: 600; /* Make text bold */
+    color: white; /* Button text color */
+    background-color: #007BFF; /* Button color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded button corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth button transitions */
+}
+
+.anmalan-button-cntr button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.anmalan-button-cntr button:active {
+    transform: translateY(1px); /* Button presses down */
+}
+
+@media (max-width: 1023px) {
+    /* Mobile */
+    
+    header {
+        margin-top: 2%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    header::after {
+        position: absolute;
+        content: "";
+        height: 1px;
+        left: 30px;
+        right:30px;
+        top: 75px;
+        background-color: black;
+    }
+
+    header img {
+        display: None;
+    }
+
+    h1 {
+        font-size: 1.6em;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    main {
+        width: 90%; /* Make main wider to fit smaller screens */
+    }
+
+    main > * {
+        padding: 3%; /* More padding for touch-friendliness */
+    }
+
+    #bottom-line {
+        opacity: 0;
+    }
+
+
+
+    #event-descript,
+    #event-details {
+        width: 100%; /* Use full width on mobile */
+        text-align: left;
+    }
+
+    #event-descript > *,
+    #event-details > * {
+        padding: 3%;
+    }
+    
+}
+
+@media (min-width: 1024px) {   
+    body {
+    } 
+    /* Desktop */
+    header {
+      margin-top: 1%;
+    }
+
+    header img {
+        height: 25px;
+    }
+
+    h1 {
+      position: relative;
+      font-size: 2.0em;
+      display: inline-block;
+      font-weight: 600;
+    }
+    
+    h1::before {
+        content: ""; 
+        position: absolute;
+        width: 250px;
+        height: 2px;
+        left: -275px;
+        top: 25px;
+        background-color: black;
+        border-radius: 5px;
+    }
+
+     h1::after {
+        content: ""; 
+        position: absolute;
+        width: 250px;
+        height: 2px;
+        right: -275px;
+        top: 25px;
+        background-color: black;
+        border-radius: 5px;
+    }
+
+    h2 {
+        font-size: 1.6em;   
+
+    }
+
+    h3 {
+        font-size: 1.4em;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    #event-details p {
+        font-size: 1.1em;
+    }
+
+
+    p {
+
+    }
+   
+    main {
+      width: 60%;      
+      
+    }
+
+    main > * {
+      padding: 2%;
+    }
+
+    main::before,
+    main::after {
+      content: "";
+      position: absolute;
+      top: 200px;
+      bottom: 200px;
+      width: 1px;
+      background-color: black; /* temporary */
+      border-radius: 10px;
+    }
+
+    main::before {
+      left: 30px;
+    }
+
+    main::after {
+      right: 30px;
+    }
+
+    #event-descript {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 75%;
+    }
+
+
+    #event-descript > * {
+        padding: 2%;
+    }
+
+    #event-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: left;
+        width: 50%;
+    }
+
+    #event-details > * {
+        padding: 1%;
+    }
+}
+
