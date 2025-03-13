@@ -21,7 +21,7 @@ scrn.addEventListener("click", () => {
       bird.y = 100;
       pipe.pipes = [];
       if(UI.score.curr >= 5 || failcount <= 2) {
-         window.location.href = "https://google.com"
+         window.location.href = "https://docs.google.com/forms/u/0/d/1b2rGvfNmFtMj4yv3HpuXh5C1uuTjCCIYa11zRv8DXVU/viewform?usp=drivesdk&edit_requested=true"
       }
       UI.score.curr = 0;
       SFX.played = false;
