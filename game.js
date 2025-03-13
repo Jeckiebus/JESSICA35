@@ -20,15 +20,14 @@ scrn.addEventListener("click", () => {
       bird.speed = 0;
       bird.y = 100;
       pipe.pipes = [];
-      if(UI.score.curr >= failcount) {
-        gameState = false;
-        console.log("this happens")
-        window.location.href = "https://google.com"
-       }
+      if(UI.score.curr >= 5 || failcount <= 2) {
+         window.location.href = "https://google.com"
+      }
       UI.score.curr = 0;
       SFX.played = false;
       failcount = failcount - 1;
-       
+      document.getElementById('point-string').innerText = "Försök igen!";
+        document.getElementById('point-string').text = "Försök igen!";
       break;
   }
 });
